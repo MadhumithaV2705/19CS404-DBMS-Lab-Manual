@@ -4,7 +4,7 @@
 Table Attributes are RollNo, Name, Gender
 
 ```sql
--- INSERT INTO Student_details (RollNo, Name, Gender)
+INSERT INTO Student_details (RollNo, Name, Gender)
 VALUES (204, 'Samuel Black', 'M');
 ```
 **Output:**
@@ -16,7 +16,7 @@ VALUES (204, 'Samuel Black', 'M');
 -- Write a SQL query to Add a new column mobilenumber as number in the Student_details table.
 
 ```sql
--- ALTER TABLE Student_details
+ALTER TABLE Student_details
 ADD COLUMN mobilenumb number;
 ```
 **Output:**
