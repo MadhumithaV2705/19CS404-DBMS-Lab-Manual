@@ -157,6 +157,7 @@ LIMIT 5;
 **Question 10**
 ---
 Write a SQL query to find the details of those salespeople who live in cities other than Paris and Rome. Return salesman_id, name, city, commission.
+
 ![image](https://github.com/user-attachments/assets/7bd274da-0134-4ae2-9aa1-fb9f122afa62)
 
 ```sql
