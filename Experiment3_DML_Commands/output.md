@@ -1,26 +1,51 @@
 **Question 1**
 --
--- Paste Question 1 here
+Write a SQL statement to change the email column of employees table with 'Unavailable' for all employees in employees table.
+Employees table
+---------------
+employee_id
+first_name
+last_name
+email
+phone_number
+hire_date
+job_id
+salary
+commission_pct
+manager_id
+department_id
 
 ```sql
--- Paste your SQL code below for Question 1
+UPDATE employees
+SET email = 'Unavailable';
 ```
-
 **Output:**
-
-![Output1](output.png)
+![{3369C292-94C6-4E7E-8F92-76F8A3A48817}](https://github.com/user-attachments/assets/d8e7f1c2-177b-4505-b9b2-94882a503ee3)
 
 **Question 2**
----
--- Paste Question 2 here
+Write a SQL statement to change the EMAIL and COMMISSION_PCT column of the following EMPLOYEES table with 'not available' and 0.55 for those employees whose DEPARTMENT_ID is 110.
+Employees table
+---------------
+employee_id
+first_name
+last_name
+email
+phone_number
+hire_date
+job_id
+salary
+commission_pct
+manager_id
+department_id
 
 ```sql
--- Paste your SQL code below for Question 2
+UPDATE EMPLOYEES
+SET email = 'not available',
+    commission_pct=0.55
+WHERE department_id = 110;
 ```
-
 **Output:**
 
-![Output2](output.png)
 
 **Question 3**
 ---
