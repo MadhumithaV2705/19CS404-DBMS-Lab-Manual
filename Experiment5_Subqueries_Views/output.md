@@ -163,24 +163,7 @@ WHERE ADDRESS = 'Delhi';
 ---
 Write a query to display all the customers whose ID is the difference between the salesperson ID of Mc Lyon and 2001.
 
-salesman table
-
-name             type
----------------  ---------------
-salesman_id      numeric(5)
-name                 varchar(30)
-city                    varchar(15)
-commission       decimal(5,2)
-
-customer table
-
-name         type
------------  ----------
-customer_id  int
-cust_name    text
-city         text
-grade        int
-salesman_id  int
+## ![image](https://github.com/user-attachments/assets/8d99e9fe-2d2b-4d22-a0df-518989e31e40)
 
 ![image](https://github.com/user-attachments/assets/2f8d3aba-397d-47fe-b049-bc68368855a9)
 
