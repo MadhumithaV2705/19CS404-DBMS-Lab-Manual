@@ -200,5 +200,5 @@ INNER JOIN
 #### ![image](https://github.com/user-attachments/assets/bf372193-c5f8-441f-b04f-cce9e474112d)
 
 ## RESULT:
-
+Thus, the SQL queries to implement different types of joins have been executed successfully.
 
