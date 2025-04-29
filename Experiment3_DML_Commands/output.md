@@ -24,6 +24,7 @@ SET email = 'Unavailable';
 ![{3369C292-94C6-4E7E-8F92-76F8A3A48817}](https://github.com/user-attachments/assets/d8e7f1c2-177b-4505-b9b2-94882a503ee3)
 
 **Question 2**
+---
 Write a SQL statement to change the EMAIL and COMMISSION_PCT column of the following EMPLOYEES table with 'not available' and 0.55 for those employees whose DEPARTMENT_ID is 110.
 Employees table
 ---------------
