@@ -152,6 +152,7 @@ ON DELETE CASCADE
 );
 ```
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/a3441f90-96e5-44ba-a8ac-c62828d44ff4)
 
 **Question 10**
@@ -163,6 +164,7 @@ INSERT INTO Customers(CustomerID,Name, Address, City, ZipCode)
 VALUES ('301', 'Michael Jordan', '123 Maple St', 'Chicago', '60616');
 ```
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/7b91ff37-c514-42bf-a2b6-fe10e0a9c5ce)
 
  ## RESULT:
