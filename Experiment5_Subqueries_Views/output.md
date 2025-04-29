@@ -188,4 +188,4 @@ WHERE customer_id = (
 ![{7428ACC5-660A-46A0-B152-80CC21AD6C46}](https://github.com/user-attachments/assets/bf3707d4-a30d-4903-bc3f-2edece8f73e7)
 
 ## RESULT:
-
+Thus, the SQL queries to implement subqueries and views have been executed successfully.
