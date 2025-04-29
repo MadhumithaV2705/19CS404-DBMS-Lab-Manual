@@ -45,100 +45,117 @@ SET email = 'not available',
 WHERE department_id = 110;
 ```
 **Output:**
-
+![{6FB23C0C-0258-41A8-A4CB-7137FB3A79AE}](https://github.com/user-attachments/assets/2541ba62-6db2-4fb4-b484-4538d7b8eecc)
 
 **Question 3**
 ---
--- Paste Question 3 here
+Update the reorder level to 40 pieces for all products belonging to the 'Grocery' category in the products table.
+PRODUCTS TABLE
+name               type
+-----------------  ---------------
+product_id         INT
+product_name       VARCHAR(100)
+category           VARCHAR(50)
+cost_price         DECIMAL(10,2)
+sell_price         DECIMAL(10,2)
+reorder_lvl        INT
+quantity           INT
+supplier_id        INT
 
 ```sql
--- Paste your SQL code below for Question 3
+UPDATE products
+SET reorder_lvl=40
+WHERE category='Grocery';
 ```
-
 **Output:**
-
-![Output3](output.png)
+![{7ADF4769-DC7A-4648-A53F-0A986151DC5E}](https://github.com/user-attachments/assets/a6475b9a-36cc-4135-a08c-0f2d148ffa5f)
 
 **Question 4**
 ---
--- Paste Question 4 here
-
+Write a SQL query to Delete customers with 'CUST_COUNTRY' 'UK' and 'WORKING_AREA' 'London' whose 'GRADE' is less than 3
+![image](https://github.com/user-attachments/assets/ce2f8a14-a5d2-430f-8b18-ab4e5c235e8f)
 ```sql
--- Paste your SQL code below for Question 4
+DELETE FROM Customer
+WHERE CUST_COUNTRY LIKE '%UK%' AND WORKING_AREA LIKE '%LONDON' AND GRADE < 3;
 ```
-
 **Output:**
-
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/ca87b0a6-5997-46bb-8f39-d83003f2c4b6)
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to Delete a Specific Surgery whose ID is 3
+![image](https://github.com/user-attachments/assets/d7a11f2f-3924-4990-b829-a511489a5cc2)
 
 ```sql
--- Paste your SQL code below for Question 5
+DELETE FROM Surgeries
+WHERE surgeon_id = 3 OR surgeon_id=4;
 ```
-
 **Output:**
-
-![Output5](output.png)
+![{823B246B-A386-4DBF-A913-F96FA9DF4574}](https://github.com/user-attachments/assets/dd4874fd-43e8-4232-9b51-18909965f00d)
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL query to Delete customers from 'customer' table where 'CUST_COUNTRY' is neither 'India' nor 'USA'.
+![image](https://github.com/user-attachments/assets/dc03d99c-c094-44ce-a861-d08dacfcf197)
 
 ```sql
--- Paste your SQL code below for Question 6
+DELETE FROM Customer
+WHERE CUST_COUNTRY NOT IN  ('India', 'USA'); 
 ```
-
 **Output:**
-
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/ca0f244a-43f4-4dca-a3a7-e37b4c138db0)
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write a SQL query to Delete All Doctors with a NULL Specialization
 
 ```sql
--- Paste your SQL code below for Question 7
+DELETE FROM Doctors
+WHERE specialization IS NULL;
 ```
-
 **Output:**
-
-![Output7](output.png)
+![{1BFBC803-5A31-42D6-903B-04C4F7548961}](https://github.com/user-attachments/assets/ca69037d-ad15-4665-a7f4-1d4535d220cd)
 
 **Question 8**
 ---
--- Paste Question 8 here
+Write a query to fetch details of employees with the address as “DELHI(DEL)” from EmployeeInfo table.
+![image](https://github.com/user-attachments/assets/d19cb403-91ed-44c0-b162-c20e0b3c385e)
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT * FROM EmployeeInfo
+WHERE Address LIKE '%DELHI(DEL)%';
 ```
-
 **Output:**
-
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/0b02bd82-cebd-4e87-9fef-de619378dcf5)
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write a query to fetch last 5 rows in EmployeeInfo table.
+![image](https://github.com/user-attachments/assets/2dc65dfc-bf60-4ea9-8c3d-1dd7e7a8e095)
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT *
+FROM EmployeeInfo
+ORDER BY EmpID DESC
+LIMIT 5;
 ```
-
 **Output:**
-
-![Output9](output.png)
+![{31F96618-03FC-40EB-8D7F-6638EFFAF50B}](https://github.com/user-attachments/assets/d42ecb1d-52c3-401a-a7db-ab9df8dde820)
 
 **Question 10**
 ---
--- Paste Question 10 here
+Write a SQL query to find the details of those salespeople who live in cities other than Paris and Rome. Return salesman_id, name, city, commission.
+![image](https://github.com/user-attachments/assets/7bd274da-0134-4ae2-9aa1-fb9f122afa62)
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT salesman_id, name, city, commission
+FROM salesman
+WHERE city NOT IN ('Paris', 'Rome');
 ```
-
 **Output:**
+![image](https://github.com/user-attachments/assets/70e6747c-7dc2-4a98-b8ed-6fd3a1a8f17b)
+
+## RESULT:
+Thus, the SQL queries to implement different types of constraints and DML commands have been executed successfully
 
 ![Output10](output.png)
