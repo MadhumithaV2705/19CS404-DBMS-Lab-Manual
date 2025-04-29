@@ -33,7 +33,8 @@ WHERE customer_id=3007
 );
 ```
 **Output:**
-![image](https://github.com/user-attachments/assets/0b0d19e6-a235-4729-9193-1e5e963443e8)
+
+## ![image](https://github.com/user-attachments/assets/0b0d19e6-a235-4729-9193-1e5e963443e8)
 
 **Question 3**
 ---
@@ -52,7 +53,7 @@ WHERE subject = g.subject
 ```
 **Output:**
 
-![{8B710FB6-7D28-47BF-9554-8ACDF1CCCA92}](https://github.com/user-attachments/assets/7073255c-1625-4613-8a15-a27e1d87fbb1)
+## ![{8B710FB6-7D28-47BF-9554-8ACDF1CCCA92}](https://github.com/user-attachments/assets/7073255c-1625-4613-8a15-a27e1d87fbb1)
 
 **Question 4**
 ---
@@ -69,7 +70,8 @@ WHERE id = (SELECT MAX(id) FROM customer)
 );
 ```
 **Output:**
-![image](https://github.com/user-attachments/assets/6da89cfe-975a-488b-bfe8-8f33be4ede1e)
+
+## ![image](https://github.com/user-attachments/assets/6da89cfe-975a-488b-bfe8-8f33be4ede1e)
 
 **Question 5**
 ---
@@ -82,7 +84,8 @@ WHERE SALARY =1500;
 ```
 
 **Output:**
-![image](https://github.com/user-attachments/assets/10923e84-9d75-4060-abf7-0a225bbcb271)
+
+## ![image](https://github.com/user-attachments/assets/10923e84-9d75-4060-abf7-0a225bbcb271)
 
 **Question 6**
 ---
@@ -95,7 +98,8 @@ WHERE AGE < 30;
 ```
 
 **Output:**
-![{40CD114F-2524-4D17-B32F-3C3BFDA1F183}](https://github.com/user-attachments/assets/ea56d572-ecb6-4529-9158-99f3106caf83)
+
+## ![{40CD114F-2524-4D17-B32F-3C3BFDA1F183}](https://github.com/user-attachments/assets/ea56d572-ecb6-4529-9158-99f3106caf83)
 
 **Question 7**
 ---
@@ -113,7 +117,8 @@ WHERE phone IN (
 );
 ```
 **Output:**
-![image](https://github.com/user-attachments/assets/c78776f4-a064-4408-b7fd-b651205d1fe4)
+
+## ![image](https://github.com/user-attachments/assets/c78776f4-a064-4408-b7fd-b651205d1fe4)
 
 **Question 8**
 ---
@@ -137,7 +142,8 @@ WHERE customer_id = 3007
 );
 ```
 **Output:**
-![{9AFC0230-33ED-4968-8730-297B0E1D9ACE}](https://github.com/user-attachments/assets/1145c3cf-f90b-469c-9aaf-0a6b65ca9424)
+
+## ![{9AFC0230-33ED-4968-8730-297B0E1D9ACE}](https://github.com/user-attachments/assets/1145c3cf-f90b-469c-9aaf-0a6b65ca9424)
 
 **Question 9**
 ---
@@ -150,7 +156,8 @@ FROM CUSTOMERS
 WHERE ADDRESS = 'Delhi';
 ```
 **Output:**
-![{661696FC-E3A6-4B0D-9D1D-629D10C8CBC1}](https://github.com/user-attachments/assets/20b5d4ee-5618-4983-9773-4a6996bcc590)
+
+## ![{661696FC-E3A6-4B0D-9D1D-629D10C8CBC1}](https://github.com/user-attachments/assets/20b5d4ee-5618-4983-9773-4a6996bcc590)
 
 **Question 10**
 ---
@@ -186,7 +193,8 @@ WHERE customer_id = (
 );
 ```
 **Output:**
-![{7428ACC5-660A-46A0-B152-80CC21AD6C46}](https://github.com/user-attachments/assets/bf3707d4-a30d-4903-bc3f-2edece8f73e7)
+
+## ![{7428ACC5-660A-46A0-B152-80CC21AD6C46}](https://github.com/user-attachments/assets/bf3707d4-a30d-4903-bc3f-2edece8f73e7)
 
 ## RESULT:
 Thus, the SQL queries to implement subqueries and views have been executed successfully.
