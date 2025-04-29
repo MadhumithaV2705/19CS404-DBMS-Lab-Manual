@@ -89,6 +89,7 @@ WHERE CUST_COUNTRY LIKE '%UK%' AND WORKING_AREA LIKE '%LONDON' AND GRADE < 3;
 **Question 5**
 ---
 Write a SQL query to Delete a Specific Surgery whose ID is 3
+
 ![image](https://github.com/user-attachments/assets/d7a11f2f-3924-4990-b829-a511489a5cc2)
 
 ```sql
@@ -140,6 +141,7 @@ WHERE Address LIKE '%DELHI(DEL)%';
 **Question 9**
 ---
 Write a query to fetch last 5 rows in EmployeeInfo table.
+
 ![image](https://github.com/user-attachments/assets/2dc65dfc-bf60-4ea9-8c3d-1dd7e7a8e095)
 
 ```sql
@@ -167,6 +169,4 @@ WHERE city NOT IN ('Paris', 'Rome');
 ![image](https://github.com/user-attachments/assets/70e6747c-7dc2-4a98-b8ed-6fd3a1a8f17b)
 
 ## RESULT:
-Thus, the SQL queries to implement different types of constraints and DML commands have been executed successfully
-
-![Output10](output.png)
+Thus, the SQL queries to implement different types of constraints and DML commands have been executed successfully.
