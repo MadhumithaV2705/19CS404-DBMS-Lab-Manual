@@ -20,6 +20,7 @@ UPDATE employees
 SET email = 'Unavailable';
 ```
 **Output:**
+
 ![{3369C292-94C6-4E7E-8F92-76F8A3A48817}](https://github.com/user-attachments/assets/d8e7f1c2-177b-4505-b9b2-94882a503ee3)
 
 **Question 2**
@@ -45,6 +46,7 @@ SET email = 'not available',
 WHERE department_id = 110;
 ```
 **Output:**
+
 ![{6FB23C0C-0258-41A8-A4CB-7137FB3A79AE}](https://github.com/user-attachments/assets/2541ba62-6db2-4fb4-b484-4538d7b8eecc)
 
 **Question 3**
@@ -68,6 +70,7 @@ SET reorder_lvl=40
 WHERE category='Grocery';
 ```
 **Output:**
+
 ![{7ADF4769-DC7A-4648-A53F-0A986151DC5E}](https://github.com/user-attachments/assets/a6475b9a-36cc-4135-a08c-0f2d148ffa5f)
 
 **Question 4**
@@ -79,6 +82,7 @@ DELETE FROM Customer
 WHERE CUST_COUNTRY LIKE '%UK%' AND WORKING_AREA LIKE '%LONDON' AND GRADE < 3;
 ```
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/ca87b0a6-5997-46bb-8f39-d83003f2c4b6)
 
 **Question 5**
@@ -91,6 +95,7 @@ DELETE FROM Surgeries
 WHERE surgeon_id = 3 OR surgeon_id=4;
 ```
 **Output:**
+
 ![{823B246B-A386-4DBF-A913-F96FA9DF4574}](https://github.com/user-attachments/assets/dd4874fd-43e8-4232-9b51-18909965f00d)
 
 **Question 6**
@@ -103,6 +108,7 @@ DELETE FROM Customer
 WHERE CUST_COUNTRY NOT IN  ('India', 'USA'); 
 ```
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/ca0f244a-43f4-4dca-a3a7-e37b4c138db0)
 
 **Question 7**
@@ -114,6 +120,7 @@ DELETE FROM Doctors
 WHERE specialization IS NULL;
 ```
 **Output:**
+
 ![{1BFBC803-5A31-42D6-903B-04C4F7548961}](https://github.com/user-attachments/assets/ca69037d-ad15-4665-a7f4-1d4535d220cd)
 
 **Question 8**
@@ -126,6 +133,7 @@ SELECT * FROM EmployeeInfo
 WHERE Address LIKE '%DELHI(DEL)%';
 ```
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/0b02bd82-cebd-4e87-9fef-de619378dcf5)
 
 **Question 9**
@@ -140,6 +148,7 @@ ORDER BY EmpID DESC
 LIMIT 5;
 ```
 **Output:**
+
 ![{31F96618-03FC-40EB-8D7F-6638EFFAF50B}](https://github.com/user-attachments/assets/d42ecb1d-52c3-401a-a7db-ab9df8dde820)
 
 **Question 10**
@@ -153,6 +162,7 @@ FROM salesman
 WHERE city NOT IN ('Paris', 'Rome');
 ```
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/70e6747c-7dc2-4a98-b8ed-6fd3a1a8f17b)
 
 ## RESULT:
