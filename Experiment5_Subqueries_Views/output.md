@@ -15,7 +15,8 @@ FROM Medications
 ```
 
 **Output:**
-![image](https://github.com/user-attachments/assets/024b3210-5dab-4f00-bb9b-e166a911fe75)
+
+## ![image](https://github.com/user-attachments/assets/024b3210-5dab-4f00-bb9b-e166a911fe75)
 
 **Question 2**
 ---
