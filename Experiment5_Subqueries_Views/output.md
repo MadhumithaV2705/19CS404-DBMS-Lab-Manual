@@ -181,6 +181,7 @@ cust_name    text
 city         text
 grade        int
 salesman_id  int
+
 ![image](https://github.com/user-attachments/assets/2f8d3aba-397d-47fe-b049-bc68368855a9)
 
 ```sql
