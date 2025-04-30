@@ -208,5 +208,8 @@ WHERE GRADE=2;
 
 ![image](https://github.com/user-attachments/assets/394b6599-2392-4e16-88df-6d6138c7e187)
 
+### Screenshot of Module 2 SEB Completion Grade:
+![image](https://github.com/user-attachments/assets/af431d1c-82e4-4ad3-8b0b-21b35a99fa26)
+
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
