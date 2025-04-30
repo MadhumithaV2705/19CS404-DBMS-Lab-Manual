@@ -300,5 +300,8 @@ SELECT ISBN, Title, Author, Publisher, YearPublished FROM Out_of_print_books;
 
 ![image](https://github.com/user-attachments/assets/79de5057-4c64-41bf-bc74-6b45c33afad0)
 
+### Screenshot of Module 1 SEB Completion Grade:
+![image](https://github.com/user-attachments/assets/3239ef98-592c-4379-a63d-e9fb9a7d0b96)
+
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
