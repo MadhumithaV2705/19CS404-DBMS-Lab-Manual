@@ -1,9 +1,30 @@
 **Question 1**
 --
+How many patients have insurance coverage valid in each year?
+
+![image](https://github.com/user-attachments/assets/2ff3e60c-7a4a-441a-b61a-38125ba7318b)
+
+### QUERY:
+```sql
+SELECT
+SUBSTR(ValidityPeriod, 1, 4) AS
+ValidityYear,
+COUNT(DISTINCT PatientID) AS TotalPatients
+FROM Insurance
+GROUP BY SUBSTR(ValidityPeriod, 1, 4);
+
+```
+**Output:**
+
+![image](https://github.com/user-attachments/assets/0d3dd0e5-985d-4866-85fd-03e6dcbc40b2)
+
+**Question 2**
+---
 How many medical records does each doctor have?
 
-![image](https://github.com/user-attachments/assets/dd908901-7e06-4a9c-baef-6c4598706dea)
+![image](https://github.com/user-attachments/assets/be2ea7d8-353a-4876-b079-458016f1e517)
 
+### QUERY:
 ```sql
 SELECT
 DoctorID,
@@ -13,23 +34,15 @@ GROUP BY DoctorID;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/e4a58d71-417d-4be9-b5d1-e782e8c91afa)
+![image](https://github.com/user-attachments/assets/26663ae8-361f-41bc-bd43-9ba33ebe4e3d)
 
-**Question 2**
+**Question 3**
 ---
 What is the total number of appointments scheduled for each day?
-Table: Appointments
-name                 type
--------------------  ----------
-AppointmentID        INTEGER
-PatientID            INTEGER
-DoctorID             INTEGER
-AppointmentDateTime  DATETIME
-Purpose              TEXT
-Status               TEXT
 
-![image](https://github.com/user-attachments/assets/f77047ea-d15d-4488-89e9-ced5511419af)
+![image](https://github.com/user-attachments/assets/5a80932a-94dd-4009-b41d-1538e06beadc)
 
+### QUERY:
 ```sql
 SELECT
 DATE(AppointmentDateTime) AS
@@ -40,18 +53,15 @@ GROUP BY DATE(AppointmentDateTime);
 ```
 **Output:**
 
-![{DA566AA8-4334-490C-ADB8-65C100C1FB8C}](https://github.com/user-attachments/assets/f1ca1b81-3307-4fd5-b9b0-3605c83f7199)
+![image](https://github.com/user-attachments/assets/84b2d94b-8429-4e2a-b458-734dbbc9684e)
 
-**Question 3**
+**Question 4**
 ---
 Write a SQL query that counts the number of unique salespeople. Return number of salespeople.
-Sample table: orders
-ord_no      purch_amt   ord_date    customer_id  salesman_id
-----------  ----------  ----------  -----------  -----------
-70001       150.5       2012-10-05  3005         5002
-70009       270.65      2012-09-10  3001         5005
-70002       65.26       2012-10-05  3002         5001
 
+![image](https://github.com/user-attachments/assets/3f21ae05-bd9d-4f40-aa78-2ad40b85a736)
+
+### QUERY:
 ```sql
 SELECT
 COUNT(DISTINCT salesman_id) AS COUNT
@@ -59,14 +69,15 @@ FROM orders;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/e5ffdfd5-b70d-44b3-865a-ea09436739c6)
+![image](https://github.com/user-attachments/assets/81a12684-c572-4849-95ce-1968a93d0e4e)
 
-**Question 4**
+**Question 5**
 ---
 Write a SQL query to find the difference between the maximum and minimum price of fruits?
 
-![image](https://github.com/user-attachments/assets/5bb0007a-8a9c-4b1b-90a3-2edbc37022af)
+![image](https://github.com/user-attachments/assets/0a874768-ae8f-41e4-80a1-45896f3af54f)
 
+### QUERY:
 ```sql
 SELECT
 MAX(price) - MIN(price)
@@ -75,14 +86,15 @@ FROM fruits;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/093d45d9-176e-4442-be51-8ef5cd649bcc)
+![image](https://github.com/user-attachments/assets/1a836c7f-02b4-4f1a-a827-e3d83680c17e)
 
-**Question 5**
+**Question 6**
 ---
 Write a SQL query to find how many employees have an income greater than 50K?
 
-![image](https://github.com/user-attachments/assets/adc07e67-4b6e-470f-88c7-c2611d7a3976)
+![image](https://github.com/user-attachments/assets/9d310184-ad8b-49b0-9341-83e6a3bcf487)
 
+### QUERY:
 ```sql
 SELECT
 COUNT(*) AS 'employees_count'
@@ -91,14 +103,15 @@ WHERE income > 50000;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/d51bcce5-a70e-4589-af44-1bebfe49b84b)
+![image](https://github.com/user-attachments/assets/d461eef2-125b-4f24-8db5-7f79f8cecd6e)
 
-**Question 6**
+**Question 7**
 ---
 Write a SQL query to  find the average salary of all employees?
 
-![image](https://github.com/user-attachments/assets/2a43e9b9-00ba-42c5-93f5-d7aacdb7f52d)
+![image](https://github.com/user-attachments/assets/2ef11b69-062a-4c97-8b5a-5b812798cc44)
 
+### QUERY:
 ```sql
 SELECT
 AVG(income) AS 'Average_Salary'
@@ -106,14 +119,15 @@ FROM employee;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/198fc1c5-e5c0-4cb6-a48a-0bc60c2e1116)
+![image](https://github.com/user-attachments/assets/326455d9-a2cf-4332-8fa9-41b9c4d5d63b)
 
-**Question 7**
+**Question 8**
 ---
 Write the SQL query that achieves the grouping of data by age, calculates the minimum income for each age group, and includes only those age groups where the minimum income is less than 1,000,000.
 
-![image](https://github.com/user-attachments/assets/d0c05c1e-90aa-47ef-917b-72c4de41b935)
+![image](https://github.com/user-attachments/assets/3e4454bf-8dd8-4ab0-8e37-0b4f5aa41ba0)
 
+### QUERY:
 ```sql
 SELECT
 age,
@@ -124,14 +138,15 @@ HAVING MIN(income) <1000000;
 ```
 **Output:**
 
-![{B21F4764-C98D-4AEA-997A-35461D5E388E}](https://github.com/user-attachments/assets/8a7f7bfd-0794-40b1-a5ba-94807e1bee85)
+![image](https://github.com/user-attachments/assets/60fba5ed-7b20-4713-81c8-be7188e898a2)
 
-**Question 8**
+**Question 9**
 ---
 Write the SQL query that achieves the grouping of data by city, calculates the average income for each city, and includes only those cities where the average income is greater than 500,000.
 
-![image](https://github.com/user-attachments/assets/b6c5109e-5fb3-4b28-8943-6cd8f5c222e2)
+![image](https://github.com/user-attachments/assets/51fd31dd-4a3c-414a-999f-a3e1142b9a50)
 
+### QUERY:
 ```sql
 SELECT
 city,
@@ -142,14 +157,15 @@ HAVING AVG(income) > 500000;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/8612f6d4-e106-4928-b57b-02b69cdb3360)
+![image](https://github.com/user-attachments/assets/42fd89a2-3a78-447e-9a07-b0863098ee77)
 
-**Question 9**
+**Question 10**
 ---
 Write the SQL query that accomplishes the selection of product which has lowest price in each category from the "products" table and includes only those products where the minimum price is less than 10.
 
-![image](https://github.com/user-attachments/assets/c3519640-69cc-4821-b750-1e86053c81ef)
+![image](https://github.com/user-attachments/assets/30418c80-dcfd-453c-9e86-63d92fa21b8b)
 
+### QUERY:
 ```sql
 SELECT
 category_id,
@@ -160,23 +176,7 @@ HAVING MIN(price)<10;
 ```
 **Output:**
 
-![{2A8A4E00-81F6-4C92-BBEA-BD0646F2EA71}](https://github.com/user-attachments/assets/e4c3855c-2ecd-4a0c-b41d-c4ae29203054)
-
-**Question 10**
----
-Write a SQL query to find  how many employees work in California?
-
-![image](https://github.com/user-attachments/assets/bed2a74e-6b63-424a-a310-c202d9509f90)
-
-```sql
-SELECT
-COUNT(*) AS 'employees_in_california'
-FROM employee
-WHERE city='California';
-```
-**Output:**
-
-![{B5B6B0A0-FF4F-4C5F-93CC-6C174E5F06B4}](https://github.com/user-attachments/assets/c18129fb-279d-4c33-8738-9ec9bc4fdba1)
+![image](https://github.com/user-attachments/assets/0ce20627-2424-4d1b-be9b-99634fb1e509)
 
 ## RESULT:
 Thus, the SQL queries to implement aggregate functions, GROUP BY, and HAVING clause have been executed successfully.
