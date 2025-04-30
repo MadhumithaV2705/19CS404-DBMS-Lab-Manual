@@ -3,6 +3,8 @@
 write a SQL query to find the salesperson and customer who reside in the same city. Return Salesman, cust_name and city.
 
 #### ![image](https://github.com/user-attachments/assets/70d2e9d9-a23e-4b5e-8d82-37cc87087ad6)
+
+### QUERY:
 ```sql
 SELECT 
     s.name AS Salesman,
@@ -23,6 +25,7 @@ From the following tables write a SQL query to find those orders where the order
 
 #### ![{931A45E5-C732-49C6-927B-FB094B35A3E4}](https://github.com/user-attachments/assets/7b8accc7-ce3c-40ac-a95e-99fc187c361c)
 
+### QUERY:
 ```sql
 SELECT 
     o.ord_no, 
@@ -47,6 +50,7 @@ Write the SQL query that achieves the selection of the "cust_name" column from t
 
 #### ![{8BD3A43B-938F-460E-B26B-93330C40634B}](https://github.com/user-attachments/assets/2a52616a-f59a-439c-93ad-2817981860a7)
 
+### QUERY:
 ```sql
 SELECT 
    cust_name
@@ -65,6 +69,7 @@ Write the SQL query that achieves the selection of all columns from the "patient
 
 #### ![image](https://github.com/user-attachments/assets/b9c7dec6-ac84-4592-a31a-6329ed809bf4)
 
+### QUERY:
 ```sql
 SELECT 
     p.*
@@ -85,6 +90,7 @@ Write the SQL query that achieves the selection of the "cust_name" and "city" co
 
 #### ![image](https://github.com/user-attachments/assets/ce0a7189-a3b1-4426-b961-5e7321a9d839)
 
+### QUERY:
 ```sql
 SELECT 
     c.cust_name, 
@@ -109,6 +115,7 @@ WHERE
 
 #### ![{3770CC72-9E85-47F3-A703-B05CF32EEBE5}](https://github.com/user-attachments/assets/9886ae51-f6c3-498b-971d-ffd7e04a81c8)
 
+### QUERY:
 ```sql
 SELECT 
     c.cust_name AS "Customer Name",
@@ -130,6 +137,7 @@ Write the SQL query that achieves the selection of the first name from the "pati
 
 #### ![image](https://github.com/user-attachments/assets/c8bc312d-6c6d-414f-8f05-1fbff98bd9de)
 
+### QUERY:
 ```sql
 SELECT p.first_name AS patient_name, 
        t.*
@@ -148,6 +156,7 @@ From the following tables write a SQL query to locate those salespeople who do n
 
 #### ![image](https://github.com/user-attachments/assets/aca4ef83-d601-4454-8988-8b8bcdf4c83a)
 
+### QUERY:
 ```sql
 SELECT c.cust_name AS "Customer Name",
        c.city ,
@@ -169,6 +178,7 @@ From the following tables write a SQL query to find those customers with a grade
 
 #### ![image](https://github.com/user-attachments/assets/a9a2f917-d346-4192-8a00-49fd0d8a8edb)
 
+### QUERY:
 ```sql
 SELECT c.cust_name, c.city AS city, c.grade, s.name AS Salesman, s.city AS city
 FROM customer c
@@ -186,6 +196,7 @@ Write the SQL query that achieves the selection of the first name from the "pati
 
 #### ![image](https://github.com/user-attachments/assets/24901c71-fd33-49c4-b8f5-a47dae8804bf)
 
+### QUERY:
 ```sql
 SELECT 
     p.first_name AS patient_name, 
