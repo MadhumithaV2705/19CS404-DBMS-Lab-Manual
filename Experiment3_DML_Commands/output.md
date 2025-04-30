@@ -1,173 +1,154 @@
 Question 1
 ---
-Write a SQL statement to change the email column of employees table with 'Unavailable' for all employees in employees table.
-Employees table
----------------
-employee_id
-first_name
-last_name
-email
-phone_number
-hire_date
-job_id
-salary
-commission_pct
-manager_id
-department_id
+Increase the reorder level by 30% for products from 'Food' category having quantity in stock less than 50% of existing reorder level in the products table
 
-```sql
-UPDATE employees
-SET email = 'Unavailable';
-```
-**Output:**
-
-![{3369C292-94C6-4E7E-8F92-76F8A3A48817}](https://github.com/user-attachments/assets/d8e7f1c2-177b-4505-b9b2-94882a503ee3)
-
-**Question 2**
----
-Write a SQL statement to change the EMAIL and COMMISSION_PCT column of the following EMPLOYEES table with 'not available' and 0.55 for those employees whose DEPARTMENT_ID is 110.
-Employees table
----------------
-employee_id
-first_name
-last_name
-email
-phone_number
-hire_date
-job_id
-salary
-commission_pct
-manager_id
-department_id
-
-```sql
-UPDATE EMPLOYEES
-SET email = 'not available',
-    commission_pct=0.55
-WHERE department_id = 110;
-```
-**Output:**
-
-![{6FB23C0C-0258-41A8-A4CB-7137FB3A79AE}](https://github.com/user-attachments/assets/2541ba62-6db2-4fb4-b484-4538d7b8eecc)
-
-**Question 3**
----
-Update the reorder level to 40 pieces for all products belonging to the 'Grocery' category in the products table.
-PRODUCTS TABLE
-name               type
------------------  ---------------
-product_id         INT
-product_name       VARCHAR(100)
-category           VARCHAR(50)
-cost_price         DECIMAL(10,2)
-sell_price         DECIMAL(10,2)
-reorder_lvl        INT
-quantity           INT
-supplier_id        INT
+![image](https://github.com/user-attachments/assets/d6808661-aec8-4bea-9770-f735352c57a3)
 
 ```sql
 UPDATE products
-SET reorder_lvl=40
-WHERE category='Grocery';
+SET reorder_lvl=reorder_lvl*1.3
+WHERE category='Food'
+AND quantity<(reorder_lvl*0.5);
 ```
 **Output:**
 
-![{7ADF4769-DC7A-4648-A53F-0A986151DC5E}](https://github.com/user-attachments/assets/a6475b9a-36cc-4135-a08c-0f2d148ffa5f)
+![image](https://github.com/user-attachments/assets/27042f9c-9b4d-48b4-9cb4-7895e2f7e7b0)
+
+**Question 2**
+---
+Write a SQL query to reduce the reorder level by 30% where cost price is more than 50 and quantity in stock is less than 100 in the products table.
+
+![image](https://github.com/user-attachments/assets/d5c32f3f-5fdd-4b48-8532-d341a7a0c922)
+
+```sql
+UPDATE products
+SET reorder_lvl=reorder_lvl*0.7
+WHERE cost_price>50
+AND quantity<100;
+```
+**Output:**
+
+![image](https://github.com/user-attachments/assets/eff30eb5-026c-4c1d-b4bf-7229274fb916)
+
+**Question 3**
+---
+Write a SQL statement to Double the salary for employees in department 20 who have a job_id ending with 'MAN'
+
+![image](https://github.com/user-attachments/assets/19a4f90b-02e8-424b-9f0e-4aea113b78b1)
+
+```sql
+UPDATE Employees
+SET salary=salary*2
+WHERE department_id = 20
+AND job_id LIKE '%MAN%';
+```
+**Output:**
+
+![image](https://github.com/user-attachments/assets/83db1717-75ad-4f6e-954a-c190e8bcd750)
 
 **Question 4**
 ---
-Write a SQL query to Delete customers with 'CUST_COUNTRY' 'UK' and 'WORKING_AREA' 'London' whose 'GRADE' is less than 3
-![image](https://github.com/user-attachments/assets/ce2f8a14-a5d2-430f-8b18-ab4e5c235e8f)
+Write a SQL statement to Change the supplier name to 'A1 Suppliers' where the supplier ID is 8 in the suppliers table.
+Table info
+suppliers(supplier_id,supplier_name,contact_person,phone_number,email,address)
+
+![image](https://github.com/user-attachments/assets/f73c3402-e38a-4006-b88d-374f62afbdf5)
+
 ```sql
-DELETE FROM Customer
-WHERE CUST_COUNTRY LIKE '%UK%' AND WORKING_AREA LIKE '%LONDON' AND GRADE < 3;
+UPDATE suppliers
+SET supplier_name='A1 Suppliers'
+WHERE supplier_id=8;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/ca87b0a6-5997-46bb-8f39-d83003f2c4b6)
+![image](https://github.com/user-attachments/assets/aef9d172-1c31-47be-a469-275ac14dd908)
 
 **Question 5**
 ---
-Write a SQL query to Delete a Specific Surgery whose ID is 3
+Decrease the reorder level by 30 percent where the product name contains 'cream' and quantity in stock is higher than reorder level in the products table.
 
-![image](https://github.com/user-attachments/assets/d7a11f2f-3924-4990-b829-a511489a5cc2)
+![image](https://github.com/user-attachments/assets/87c5babd-df6a-4f9b-b62a-4cefa0eab06c)
 
 ```sql
-DELETE FROM Surgeries
-WHERE surgeon_id = 3 OR surgeon_id=4;
+UPDATE products
+SET reorder_lvl=reorder_lvl*0.7
+WHERE product_name LIKE '%cream%'
+AND quantity> reorder_lvl;
 ```
 **Output:**
 
-![{823B246B-A386-4DBF-A913-F96FA9DF4574}](https://github.com/user-attachments/assets/dd4874fd-43e8-4232-9b51-18909965f00d)
+![image](https://github.com/user-attachments/assets/d70e8337-58e5-4c1e-b169-24de74c6eb49)
 
 **Question 6**
 ---
-Write a SQL query to Delete customers from 'customer' table where 'CUST_COUNTRY' is neither 'India' nor 'USA'.
-![image](https://github.com/user-attachments/assets/dc03d99c-c094-44ce-a861-d08dacfcf197)
+Write a SQL query to Delete customers from 'customer' table where 'GRADE' is greater than or equal to 2.
+
+![image](https://github.com/user-attachments/assets/8f6a6974-a537-403e-b5b0-e7aba36ac36e)
 
 ```sql
 DELETE FROM Customer
-WHERE CUST_COUNTRY NOT IN  ('India', 'USA'); 
+WHERE GRADE>=2;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/ca0f244a-43f4-4dca-a3a7-e37b4c138db0)
+![image](https://github.com/user-attachments/assets/d573d023-dfed-429d-89ab-4cee6ca9fc0d)
 
 **Question 7**
 ---
-Write a SQL query to Delete All Doctors with a NULL Specialization
+Write a SQL query to Delete customers from 'customer' table where 'CUST_NAME' contains the substring 'Holmes'.
+
+![image](https://github.com/user-attachments/assets/6b01804f-61cd-44ad-9fc8-3147e5356565)
 
 ```sql
-DELETE FROM Doctors
-WHERE specialization IS NULL;
+DELETE FROM Customer
+WHERE CUST_NAME LIKE '%Holmes%';
 ```
 **Output:**
 
-![{1BFBC803-5A31-42D6-903B-04C4F7548961}](https://github.com/user-attachments/assets/ca69037d-ad15-4665-a7f4-1d4535d220cd)
+![image](https://github.com/user-attachments/assets/c107cc22-9bf2-4a1d-ab53-3bc9aacae66f)
 
 **Question 8**
 ---
-Write a query to fetch details of employees with the address as “DELHI(DEL)” from EmployeeInfo table.
-![image](https://github.com/user-attachments/assets/d19cb403-91ed-44c0-b162-c20e0b3c385e)
+Write a SQL query to Delete customers from 'customer' table where 'OPENING_AMT' is between 4000 and 6000.
+
+![image](https://github.com/user-attachments/assets/c1d8810e-1435-4f20-8457-9800ff5aae71)
 
 ```sql
-SELECT * FROM EmployeeInfo
-WHERE Address LIKE '%DELHI(DEL)%';
+DELETE FROM Customer
+WHERE OPENING_AMT
+BETWEEN 4000 AND 6000;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/0b02bd82-cebd-4e87-9fef-de619378dcf5)
+![image](https://github.com/user-attachments/assets/ae244e57-7af4-412b-a7c5-de69bbaaa648)
 
 **Question 9**
 ---
-Write a query to fetch last 5 rows in EmployeeInfo table.
+Write a SQL query to Delete customers from 'customer' table where 'GRADE' is odd.
 
-![image](https://github.com/user-attachments/assets/2dc65dfc-bf60-4ea9-8c3d-1dd7e7a8e095)
+![image](https://github.com/user-attachments/assets/e95c188c-b75b-42a2-9085-c93ba14068db)
 
 ```sql
-SELECT *
-FROM EmployeeInfo
-ORDER BY EmpID DESC
-LIMIT 5;
+DELETE FROM Customer
+WHERE GRADE%2 !=0;
 ```
 **Output:**
 
-![{31F96618-03FC-40EB-8D7F-6638EFFAF50B}](https://github.com/user-attachments/assets/d42ecb1d-52c3-401a-a7db-ab9df8dde820)
+![image](https://github.com/user-attachments/assets/e425d740-c01f-48ea-855a-9fc94693d4fb)
 
 **Question 10**
 ---
-Write a SQL query to find the details of those salespeople who live in cities other than Paris and Rome. Return salesman_id, name, city, commission.
+Write a SQL query to Delete customers from 'customer' table where 'GRADE' is exactly 2.
 
-![image](https://github.com/user-attachments/assets/7bd274da-0134-4ae2-9aa1-fb9f122afa62)
+![image](https://github.com/user-attachments/assets/7078a74c-6db8-42bd-9d95-f5d30913575b)
 
 ```sql
-SELECT salesman_id, name, city, commission
-FROM salesman
-WHERE city NOT IN ('Paris', 'Rome');
+DELETE FROM Customer
+WHERE GRADE=2;
 ```
 **Output:**
 
-![image](https://github.com/user-attachments/assets/70e6747c-7dc2-4a98-b8ed-6fd3a1a8f17b)
+![image](https://github.com/user-attachments/assets/394b6599-2392-4e16-88df-6d6138c7e187)
 
 ## RESULT:
 Thus, the SQL queries to implement different types of constraints and DML commands have been executed successfully.
