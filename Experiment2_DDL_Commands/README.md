@@ -104,9 +104,10 @@ CREATE TABLE Table_Name (
 ```
 **Question 1**
 --
--- Insert the below data into the Student_details table, allowing the Subject and MARKS columns to take their default values.
+Insert the below data into the Student_details table, allowing the Subject and MARKS columns to take their default values.
 Table Attributes are RollNo, Name, Gender
 
+### QUERY:
 ```sql
 INSERT INTO Student_details (RollNo, Name, Gender)
 VALUES (204, 'Samuel Black', 'M');
@@ -117,13 +118,15 @@ VALUES (204, 'Samuel Black', 'M');
 
 **Question 2**
 ---
--- Write a SQL query to Add a new column mobilenumber as number in the Student_details table.
+Write a SQL query to Add a new column mobilenumber as number in the Student_details table.
 
+### QUERY:
 ```sql
 ALTER TABLE Student_details
 ADD COLUMN mobilenumb number;
 ```
 **Output:**
+
 ![{A945739D-AE5B-47F9-AED5-1FB77C1A507F}](https://github.com/user-attachments/assets/44965939-baff-4d3c-a802-2e1088a09af8)
 
 **Question 3**
@@ -133,6 +136,7 @@ OrderID as INTEGER should be the primary key.
 OrderDate as DATE should be not NULL.
 CustomerID as INTEGER should be a foreign key referencing Customers(CustomerID).
 
+### QUERY:
 ```sql
 CREATE TABLE Orders(
 OrderID integer primary key,
@@ -151,6 +155,7 @@ foreign key (CustomerID) references Customers(CustomerID)
 Insert all books from Out_of_print_books into Books
 Table attributes are ISBN, Title, Author, Publisher, YearPublished
 
+### QUERY:
 ```sql
 INSERT INTO Books (ISBN, Title, Author, Publisher, YearPublished)
 SELECT ISBN, Title, Author, Publisher, YearPublished FROM Out_of_print_books;
@@ -168,6 +173,7 @@ last_name as TEXT and not NULL.
 email as TEXT.
 phone as TEXT and not NULL with a check constraint to ensure the length of phone is at least 10 characters.
 
+### QUERY:
 ```sql
 CREATE TABLE contacts(
 contact_id integer primary key,
@@ -178,12 +184,14 @@ phone text not null CHECK(LENGTH(phone)>=10)
 );
 ```
 **Output:**
+
 ![{FAFBD9A5-BD7D-4B7C-9C07-2082CC654DA2}](https://github.com/user-attachments/assets/cee6c7d3-f84a-46ec-920a-6810cd970d31)
 
 **Question 6**
 ---
 create a table named jobs including columns job_id, job_title, min_salary and max_salary, and make sure that, the default value for job_title is blank and min_salary is 8000 and max_salary is NULL will be entered automatically at the time of insertion if no value assigned for the specified columns.
 
+### QUERY:
 ```sql
 CREATE TABLE jobs(
 job_id integer primary key,
@@ -193,6 +201,7 @@ max_salary integer default null
 );
 ```
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/917efc0d-49a8-4f80-8d59-be7a62fa0301)
 
 **Question 7**
@@ -206,6 +215,7 @@ icom_id is a foreign key referencing com_id in the company table.
 The foreign key should set NULL on updates and deletes.
 item_desc and rate should not accept NULL.
 
+### QUERY:
 ```sql
 CREATE TABLE item(
 item_id text primary key,
@@ -219,6 +229,7 @@ ON DELETE SET NULL
 ```
 
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/aa3b00f7-91c4-4186-ad7f-e4da99650674)
 
 **Question 8**
@@ -226,11 +237,13 @@ ON DELETE SET NULL
 Write a SQL query to Add a new column Mobilenumber as number in the Student_details table.
 ![image](https://github.com/user-attachments/assets/abf2dca0-e11b-4982-93f9-19a0c39cc1c7)
 
+### QUERY:
 ```sql
 ALTER TABLE Student_details
 add column Mobilenumber number;
 ```
 **Output:**
+
 ![image](https://github.com/user-attachments/assets/302a74cf-2114-4ecf-a3ce-328ba6269710)
 
 **Question 9**
@@ -244,6 +257,7 @@ icom_id is a foreign key referencing com_id in the company table.
 The foreign key should cascade updates and deletes.
 item_desc and rate should not accept NULL.
 
+### QUERY:
 ```sql
 CREATE TABLE item(
 item_id text primary key,
@@ -263,6 +277,7 @@ ON DELETE CASCADE
 ---
 Insert a customer with CustomerID 301, Name Michael Jordan, Address 123 Maple St, City Chicago, and ZipCode 60616 into the Customers table.
 
+### QUERY:
 ```sql
 INSERT INTO Customers(CustomerID,Name, Address, City, ZipCode)
 VALUES ('301', 'Michael Jordan', '123 Maple St', 'Chicago', '60616');
@@ -271,7 +286,5 @@ VALUES ('301', 'Michael Jordan', '123 Maple St', 'Chicago', '60616');
 
 ![image](https://github.com/user-attachments/assets/7b91ff37-c514-42bf-a2b6-fe10e0a9c5ce)
 
- ## RESULT:
- Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
