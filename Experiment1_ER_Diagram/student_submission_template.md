@@ -50,15 +50,39 @@ Participation: Partial (Doctor specializes in a department)
 
 ## EXTENSION (Prerequisite / Billing):
 
-Billing was modeled by connecting Patient to Billing through the "Receive" relationship, where billing entries are generated for each patient based on services received. The Billing entity includes attributes like Billing_ID, Amount, Billing Date, and Payment Status to track financial transactions independently but linked via Patient_ID.
+- **Billing Modeling Approach**:
+  - The **Billing** entity is connected to the **Patient** entity via a **"Receive"** relationship.
+  - This relationship represents that **billing entries are generated** for each patient **based on services received**.
+
+- **Billing Entity Attributes**:
+  - **Billing_ID** – Unique identifier for each billing entry.
+  - **Amount** – The monetary value associated with the services rendered.
+  - **Billing Date** – The date when the billing entry was generated.
+  - **Payment Status** – Indicates whether the bill has been paid, is pending, or overdue.
+
+- **Entity Relationship Note**:
+  - **Billing** tracks financial transactions **independently**.
+  - Each billing entry is **linked to the Patient** via the **Patient_ID** foreign key.
 
 ## DESIGN CHOICES:
 
-Entities like Patient, Doctor, and Appointment are core in any healthcare system, so they were naturally included.
-Medical Records are associated separately for flexibility — allowing multiple diagnoses per patient and doctor.
-Billing is separated to maintain financial records cleanly, keeping healthcare service records independent from financial operations.
-Departments were created for Doctors to properly map organizational hierarchy and specialization.
-Many-to-Many relationships like Book and Assign are handled with associative entities (like Appointment) to simplify complex scheduling scenarios.
+- **Core Entities**:
+  - **Patient**, **Doctor**, and **Appointment** are foundational entities in any healthcare system and were thus naturally included.
+
+- **Medical Records**:
+  - Managed as a **separate entity** for flexibility.
+  - Enables support for **multiple diagnoses** per patient and doctor.
+
+- **Billing**:
+  - Kept **separate from medical services** to maintain clear and organized **financial records**.
+  - Ensures **independence between healthcare services** and financial operations.
+
+- **Departments**:
+  - Created for **Doctors** to reflect the **organizational hierarchy** and **specializations** within the healthcare facility.
+
+- **Many-to-Many Relationships**:
+  - Relationships like **Book (Patients ↔ Appointments)** and **Assign (Doctors ↔ Appointments)** are managed through **associative entities** (e.g., **Appointment**).
+  - This simplifies **complex scheduling** and relationship management.
 
 ## RESULT:
 Thus, the ER diagram for the hospital management system was successfully designed, and the entities, relationships, and constraints were clearly represented.
