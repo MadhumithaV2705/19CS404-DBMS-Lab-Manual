@@ -4,6 +4,7 @@ Increase the reorder level by 30% for products from 'Food' category having quant
 
 ![image](https://github.com/user-attachments/assets/d6808661-aec8-4bea-9770-f735352c57a3)
 
+### QUERY:
 ```sql
 UPDATE products
 SET reorder_lvl=reorder_lvl*1.3
@@ -20,6 +21,7 @@ Write a SQL query to reduce the reorder level by 30% where cost price is more th
 
 ![image](https://github.com/user-attachments/assets/d5c32f3f-5fdd-4b48-8532-d341a7a0c922)
 
+### QUERY:
 ```sql
 UPDATE products
 SET reorder_lvl=reorder_lvl*0.7
@@ -36,6 +38,7 @@ Write a SQL statement to Double the salary for employees in department 20 who ha
 
 ![image](https://github.com/user-attachments/assets/19a4f90b-02e8-424b-9f0e-4aea113b78b1)
 
+### QUERY:
 ```sql
 UPDATE Employees
 SET salary=salary*2
@@ -54,6 +57,7 @@ suppliers(supplier_id,supplier_name,contact_person,phone_number,email,address)
 
 ![image](https://github.com/user-attachments/assets/f73c3402-e38a-4006-b88d-374f62afbdf5)
 
+### QUERY:
 ```sql
 UPDATE suppliers
 SET supplier_name='A1 Suppliers'
@@ -69,6 +73,7 @@ Decrease the reorder level by 30 percent where the product name contains 'cream'
 
 ![image](https://github.com/user-attachments/assets/87c5babd-df6a-4f9b-b62a-4cefa0eab06c)
 
+### QUERY:
 ```sql
 UPDATE products
 SET reorder_lvl=reorder_lvl*0.7
@@ -85,6 +90,7 @@ Write a SQL query to Delete customers from 'customer' table where 'GRADE' is gre
 
 ![image](https://github.com/user-attachments/assets/8f6a6974-a537-403e-b5b0-e7aba36ac36e)
 
+### QUERY:
 ```sql
 DELETE FROM Customer
 WHERE GRADE>=2;
@@ -99,6 +105,7 @@ Write a SQL query to Delete customers from 'customer' table where 'CUST_NAME' co
 
 ![image](https://github.com/user-attachments/assets/6b01804f-61cd-44ad-9fc8-3147e5356565)
 
+### QUERY:
 ```sql
 DELETE FROM Customer
 WHERE CUST_NAME LIKE '%Holmes%';
@@ -113,6 +120,7 @@ Write a SQL query to Delete customers from 'customer' table where 'OPENING_AMT' 
 
 ![image](https://github.com/user-attachments/assets/c1d8810e-1435-4f20-8457-9800ff5aae71)
 
+### QUERY:
 ```sql
 DELETE FROM Customer
 WHERE OPENING_AMT
@@ -128,6 +136,7 @@ Write a SQL query to Delete customers from 'customer' table where 'GRADE' is odd
 
 ![image](https://github.com/user-attachments/assets/e95c188c-b75b-42a2-9085-c93ba14068db)
 
+### QUERY:
 ```sql
 DELETE FROM Customer
 WHERE GRADE%2 !=0;
@@ -142,6 +151,7 @@ Write a SQL query to Delete customers from 'customer' table where 'GRADE' is exa
 
 ![image](https://github.com/user-attachments/assets/7078a74c-6db8-42bd-9d95-f5d30913575b)
 
+### QUERY:
 ```sql
 DELETE FROM Customer
 WHERE GRADE=2;
