@@ -264,5 +264,8 @@ INNER JOIN
 
 #### ![image](https://github.com/user-attachments/assets/bf372193-c5f8-441f-b04f-cce9e474112d)
 
+### Screenshot of Module 5 SEB Completion Grade:
+![image](https://github.com/user-attachments/assets/62f9bbc8-732a-4bc3-b5d9-0689304aa0ae)
+
 ## RESULT
 Thus, the SQL queries to implement different types of joins have been executed successfully.
