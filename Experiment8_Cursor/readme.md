@@ -137,43 +137,10 @@ END;
 ### PL/SQL QUERY:
 
 ```
-SET SERVEROUTPUT ON;
-/
-
--- Step 1: Drop and Create employees table with salary
-BEGIN
-    EXECUTE IMMEDIATE 'DROP TABLE employees';
-EXCEPTION
-    WHEN OTHERS THEN
-        NULL; -- Ignore if table doesn't exist
-END;
-/
-
-CREATE TABLE employees (
-    emp_id       NUMBER PRIMARY KEY,
-    emp_name     VARCHAR2(100),
-    designation  VARCHAR2(100),
-    salary       NUMBER
-);
-/
-
--- Step 2: Insert sample employee data with varying salary
--- Comment out these inserts to test the "no employees found" output
-BEGIN
-    INSERT INTO employees VALUES (1, 'Alice', 'Manager', 8000);
-    INSERT INTO employees VALUES (2, 'Bob', 'Developer', 4500);
-    INSERT INTO employees VALUES (3, 'Charlie', 'Analyst', 5000);
-    INSERT INTO employees VALUES (4, 'David', 'Tester', 3000);
-    INSERT INTO employees VALUES (5, 'Eve', 'Designer', 6500);
-    COMMIT;
-END;
-/
-
--- Step 3: PL/SQL Block using Parameterized Cursor and Exception Handling
 DECLARE
     -- Input salary range
-    v_min_salary NUMBER := 9000;
-    v_max_salary NUMBER := 10000;
+    v_min_salary NUMBER := 4000;  -- Set to a value that has employee matches
+    v_max_salary NUMBER := 8000;
 
     -- Parameterized cursor to fetch employees in the range
     CURSOR emp_cursor(p_min NUMBER, p_max NUMBER) IS
@@ -184,7 +151,7 @@ DECLARE
     v_found BOOLEAN := FALSE;
 
 BEGIN
-    -- Cursor FOR loop
+    -- Cursor FOR loop to fetch and display employee details
     FOR emp_rec IN emp_cursor(v_min_salary, v_max_salary) LOOP
         v_found := TRUE;
         DBMS_OUTPUT.PUT_LINE(
@@ -195,21 +162,19 @@ BEGIN
         );
     END LOOP;
 
-    -- If no data found, raise exception
+    -- If no data found, display a custom message for employees in the range
     IF NOT v_found THEN
-        RAISE NO_DATA_FOUND;
+        DBMS_OUTPUT.PUT_LINE('No employees found in the specified salary range.');
     END IF;
 
 EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE('No employees found in the specified salary range.');
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('An unexpected error occurred: ' || SQLERRM);
 END;
 /
 ```
 **OUTPUT:**  
-![image](https://github.com/user-attachments/assets/398a9268-395d-4864-9795-b98fc1ea43eb)
+![image](https://github.com/user-attachments/assets/e5be826e-ea53-4c83-a506-4867be326535)
 
 ---
 
