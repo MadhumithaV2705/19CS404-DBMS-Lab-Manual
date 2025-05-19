@@ -66,9 +66,6 @@ END;
 
 **Write a PL/SQL program using a simple cursor to fetch employee names and designations from the `employees` table. Implement exception handling for the following cases:**
 
-1. **NO_DATA_FOUND**: When no rows are fetched.
-2. **OTHERS**: Any other unexpected errors during execution.
-
 ## PL/SQL QUERY:
 ```
 -- Step 1: Drop the table if it exists (for cleaning up) and create the employees table
@@ -136,9 +133,6 @@ END;
 ### **Question 2: Parameterized Cursor with Exception Handling**
 
 **Write a PL/SQL program using a parameterized cursor to retrieve and display employees with a salary in a given range. Implement exception handling for the following errors:**
-
-1. **NO_DATA_FOUND**: When no employees meet the salary criteria.
-2. **OTHERS**: For any unexpected errors during the execution.
 
 ### PL/SQL QUERY:
 
@@ -223,9 +217,6 @@ END;
 
 **Write a PL/SQL program using a cursor FOR loop to retrieve and display all employee names and their department numbers from the `employees` table. Implement exception handling for the following cases:**
 
-1. **NO_DATA_FOUND**: If no employees are found in the database.
-2. **OTHERS**: For any other unexpected errors.
-
 ### PL/SQL QUERY:
 ```
 -- Enable DBMS output
@@ -290,9 +281,6 @@ END;
 
 **Write a PL/SQL program that uses a cursor with `%ROWTYPE` to fetch and display complete employee records (emp_id, emp_name, designation, salary). Implement exception handling for the following errors:**
 
-1. **NO_DATA_FOUND**: When no employees are found in the database.
-2. **OTHERS**: For any other errors that occur.
-
 ### PL/SQL QUERY:
 ```
 -- Enable DBMS output
@@ -352,9 +340,6 @@ END;
 ### **Question 5: Cursor with FOR UPDATE Clause and Exception Handling**
 
 **Write a PL/SQL program using a cursor with the `FOR UPDATE` clause to update the salary of employees in a specific department. Implement exception handling for the following cases:**
-
-1. **NO_DATA_FOUND**: If no rows are affected by the update.
-2. **OTHERS**: For any unexpected errors during execution.
 
 ### PL/SQL QUERY:
 ```
